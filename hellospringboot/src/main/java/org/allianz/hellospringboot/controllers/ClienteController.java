@@ -1,5 +1,6 @@
 package org.allianz.hellospringboot.controllers;
 
+import org.allianz.hellospringboot.dto.*;
 import org.allianz.hellospringboot.models.Cliente;
 import org.allianz.hellospringboot.services.IClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,13 @@ public class ClienteController {
 	}
 	
 	@PostMapping("/api/cliente")
-	public ResponseEntity<String> agregar(@RequestBody Cliente cliente){
+	public ResponseEntity<AddResult> agregar(@RequestBody Cliente cliente){
 		try {
 			this.service.add(cliente);
-			return ResponseEntity.ok("Cliente agregado satisfactoriamente");
+			return ResponseEntity.ok(new AddResult(true, "Cliente agregado satisfactoriamente", cliente));
 		} catch (Exception ex) {
-			return new ResponseEntity<String>(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<AddResult>(new AddResult(false, ex.getMessage(), cliente), 
+					HttpStatus.NOT_ACCEPTABLE);
 		}
 	}
 }
