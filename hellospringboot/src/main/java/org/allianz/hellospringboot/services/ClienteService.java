@@ -2,7 +2,7 @@ package org.allianz.hellospringboot.services;
 
 import java.util.List;
 import org.allianz.hellospringboot.models.Cliente;
-import org.allianz.hellospringboot.repositories.ClienteRepository;
+import org.allianz.hellospringboot.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class ClienteService implements IClienteService {
 	private ClienteRepository repository;
 	
 	public List<Cliente> getAll() {
-		return this.repository.getAll();
+		return this.repository.findAll();
 	}
 
 	public void add(Cliente cliente) {
@@ -22,7 +22,7 @@ public class ClienteService implements IClienteService {
 			throw new RuntimeException("El nombre del cliente no puede quedar vacio");
 		}
 		
-		this.repository.add(cliente);
+		this.repository.save(cliente);
 	}
 
 }
