@@ -13,9 +13,13 @@ public class AppConfig implements WebMvcConfigurer {
 
 	@Autowired
     RequestLoggerInterceptor loggerInterceptor;	
+	@Autowired
+	RequestRedirectInterceptor redirectInterceptor;
 	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 	    registry.addInterceptor(this.loggerInterceptor);
+	    registry.addInterceptor(this.redirectInterceptor).addPathPatterns("/api/customer");
+	   
 	}
 }
