@@ -16,8 +16,11 @@ public class RequestLoggerInterceptor implements HandlerInterceptor {
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-			throws Exception {
-		logger.info("BEFORE " + request.getMethod() + " " + request.getRequestURI());
+			throws Exception {		
+		long inicio = System.currentTimeMillis();
+		request.setAttribute("inicio", inicio);
+		
+		logger.info("BEFORE " + request.getMethod() + " " + request.getRequestURI()+" FROM "+ request.getRemoteAddr());
 		return true;
 	}
 	
@@ -30,6 +33,9 @@ public class RequestLoggerInterceptor implements HandlerInterceptor {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
-		logger.info("AFTER COMPLETION " + request.getMethod() + " " + request.getRequestURI());
+		long inicio = (long)request.getAttribute("inicio");
+		long tiempo = System.currentTimeMillis() - inicio; 
+				
+		logger.info("AFTER COMPLETION " + request.getMethod() + " " + request.getRequestURI() +"("+ tiempo +" ms)");
 	}
 }

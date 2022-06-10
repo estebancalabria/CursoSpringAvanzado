@@ -13,12 +13,9 @@ public class AppConfig implements WebMvcConfigurer {
 
 	@Autowired
     RequestLoggerInterceptor loggerInterceptor;	
-	@Autowired
-	RequestHeadersInterceptor headersInterceptor;
 	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 	    registry.addInterceptor(this.loggerInterceptor);
-	    registry.addInterceptor(this.headersInterceptor);
 	}
 }
