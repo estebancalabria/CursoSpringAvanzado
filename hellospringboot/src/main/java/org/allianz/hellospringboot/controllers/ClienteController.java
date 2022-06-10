@@ -23,15 +23,12 @@ public class ClienteController {
 
 	@GetMapping("/api/cliente")
 	public List<Cliente> listarTodos(){
-		log.info("GET /api/cliente/ (ClienteController.listarTodos)");
 		return this.service.getAll();
 	}
 	
 	@GetMapping("/api/cliente/{id}")
 	public ResponseEntity<Cliente> obtenerPorId(@PathVariable int id){
 		try {
-			log.info("GET /api/cliente/"+ id +" (ClienteController.obtenerPorId("+id+")");
-			
 			Cliente c = this.service.getById(id);
 			return ResponseEntity.ok(c);
 		} catch (Exception ex) {
