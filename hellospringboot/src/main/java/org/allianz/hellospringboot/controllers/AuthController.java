@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthController {
 	
-	@GetMapping("/api/login")
+   //Este va con basic auth
+   @GetMapping("/api/login")
    public String GetToken() {
-	   return "TOKENDEEJEMPLO";
+	   return "TOKEN";
    }
 }
