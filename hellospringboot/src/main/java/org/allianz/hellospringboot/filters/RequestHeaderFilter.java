@@ -29,9 +29,7 @@ public class RequestHeaderFilter implements Filter {
 			String token = httpRequest.getHeader("token");
 			
 			if ((token==null) || (!token.equals("TOKEN"))) {	
-				//HttpServletResponseWrapper unauthorizedResponse = new HttpServletResponseWrapper((HttpServletResponse)response);
 				((HttpServletResponse)response).sendError(HttpServletResponse.SC_UNAUTHORIZED);
-				//chain.doFilter(httpRequest, unauthorizedResponse);
 			}
 		}
 		
