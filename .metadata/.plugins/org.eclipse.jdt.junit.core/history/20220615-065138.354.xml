@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="org.allianz.hellospringboot" project="hellospringboot" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="org.allianz.hellospringboot.ClienteControllerTests" time="0.305" displayname="ClienteControllerTests" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]">
+    <testcase name="testListarTodosAuthorized" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.19" displayname="testListarTodosAuthorized()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testListarTodosAuthorized()]"/>
+    <testcase name="testControllerLoads" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.1" displayname="testControllerLoads()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testControllerLoads()]"/>
+    <testcase name="testListarTodosUnauthorized" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.012" displayname="testListarTodosUnauthorized()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testListarTodosUnauthorized()]"/>
+  </testsuite>
+  <testsuite name="org.allianz.hellospringboot.HellospringbootApplicationTests" time="0.004" displayname="HellospringbootApplicationTests" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.HellospringbootApplicationTests]">
+    <testcase name="contextLoads" classname="org.allianz.hellospringboot.HellospringbootApplicationTests" time="0.004" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.HellospringbootApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>
