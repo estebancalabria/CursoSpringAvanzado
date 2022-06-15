@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ClienteControllerTests" project="hellospringboot" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="org.allianz.hellospringboot.ClienteControllerTests" time="0.287" displayname="ClienteControllerTests" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]">
-    <testcase name="testListarTodosAuthorized" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.186" displayname="testListarTodosAuthorized()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testListarTodosAuthorized()]"/>
-    <testcase name="testControllerLoads" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.066" displayname="testControllerLoads()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testControllerLoads()]"/>
-    <testcase name="testListarTodosUnauthorized" classname="org.allianz.hellospringboot.ClienteControllerTests" time="0.029" displayname="testListarTodosUnauthorized()" uniqueid="[engine:junit-jupiter]/[class:org.allianz.hellospringboot.ClienteControllerTests]/[method:testListarTodosUnauthorized()]"/>
-  </testsuite>
-</testrun>
